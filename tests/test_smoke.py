@@ -5,6 +5,10 @@ def test_greeting():
     assert "Hello" in reply("hi")
 
 
+def test_morning_greeting():
+    assert "Hello" in reply("good morning")
+
+
 def test_office_lookup():
     assert "I.101" in reply("Where is the Training Office?")
 
