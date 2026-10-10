@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "assistant"
 version = "0.1.0"
-description = "CSC10014 Smart Virtual Assistant — starter"
+description = "CSC10014 University Life Assistant — Team 02 shared skeleton"
 requires-python = ">=3.10"
 
 [tool.setuptools.packages.find]

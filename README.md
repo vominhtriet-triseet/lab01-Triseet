@@ -1,8 +1,49 @@
-# Study Assistant
+# University Life Assistant — Team 02
 
-A small rule-based assistant for the CSC10014 Smart Virtual Assistant project.
-It answers greetings and looks up office locations and opening hours from
-`data/offices.csv`.
+A student-facing **Smart Virtual Assistant** for CSC10014. The project will
+combine course, campus, regulation, and schedule information so students can
+find reliable university-life information in one place.
+
+> **Lab 1 scope:** this repository establishes the shared, reproducible project
+> skeleton. It currently includes a small deterministic, rule-based office
+> lookup as a smoke-testable vertical slice. The full assistant will be built
+> incrementally in later weeks.
+
+## Project direction
+
+The future University Life Assistant will support four core ideas:
+
+- **Search:** retrieve relevant information from approved, documented sources.
+- **Structured data:** use validated records such as office locations, hours,
+  course data, and schedules.
+- **Planning:** break multi-step student requests into clear actions.
+- **Routing:** send each request to the suitable capability, ask for
+  clarification when needed, and provide a safe fallback otherwise.
+
+### Current deterministic capability
+
+The starter implementation intentionally has no LLM or external API. It
+answers greetings and matches a requested office against the structured sample
+file `data/offices.csv`. This provides a deterministic capability that can be
+run and tested by every team member before later AI-enabled features are added.
+
+## Repository rules
+
+- Start changes from a GitHub Issue and work on a branch such as `feat/...`,
+  `fix/...`, `docs/...`, `test/...`, or `chore/...`.
+- Do **not** push directly to `main`; open a pull request (PR) and request a
+  review from another team member.
+- Use Conventional Commits, for example `docs(team): add initial team roles`.
+- Never commit `.env`, secrets, tokens, real student/personal data, raw chat
+  logs, or files under `data/raw/`.
+- Do not add dependencies without first discussing and recording the decision
+  with the team.
+
+## Team
+
+See [`docs/team.md`](docs/team.md) for the six team roles and the initial
+contribution plan. Member names and GitHub usernames will be added by each
+member in their own onboarding PR.
 
 ## Setup
 
@@ -68,7 +109,7 @@ For interactive mode, run `python -m assistant` and type questions. Enter
 python -m pytest -q
 ```
 
-Expected result: `4 passed`.
+Expected result: `5 passed`.
 
 To check the complete developer setup:
 
@@ -84,8 +125,8 @@ Every check should show `[ OK ]`.
 - `tests/`: automated tests.
 - `data/`: small sample data used by the assistant.
 - `scripts/check_env.py`: environment verification script.
-- `docs/`: project documentation.
-- `ui/`: future user-interface plan.
+- `docs/`: project documentation, team roles, and contribution records.
+- `ui/`: future end-to-end user-interface plan.
 - `requirements.txt`: pinned direct dependencies.
 - `pyproject.toml`: package and test configuration.
 
